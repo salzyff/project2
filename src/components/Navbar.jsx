@@ -96,7 +96,7 @@ function Navbar() {
       <div className="nav-actions">
 
         <a
-          href="https://wa.me/2348012345678"
+          href="https://wa.me/2347042785091"
           target="_blank"
           rel="noreferrer"
           className="whatsapp"
@@ -161,7 +161,7 @@ function Navbar() {
         <div className="mobile-nav-bottom">
 
           <a
-            href="https://wa.me/2348012345678"
+            href="https://wa.me/2347042785091"
             target="_blank"
             rel="noreferrer"
             className="mobile-whatsapp"
