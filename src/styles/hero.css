@@ -1,0 +1,511 @@
+.hero {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+
+  gap: 70px;
+
+  /* THIS is the fix */
+  margin-top: 120px;
+
+  padding: 70px 7% 80px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(239, 187, 58, 0.14),
+      transparent 28%
+    ),
+    #f8f9fb;
+}
+
+/* ================================
+   LEFT
+================================ */
+
+.hero-left {
+  max-width: 750px;
+}
+
+
+/* TAG */
+
+.hero-tag {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 25px;
+
+  padding: 9px 15px;
+
+  border: 1px solid rgba(217, 165, 45, 0.35);
+  border-radius: 100px;
+
+  background: rgba(239, 187, 58, 0.08);
+
+  color: #9e7418;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero-tag-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #efbb3a;
+
+  box-shadow: 0 0 8px rgba(239, 187, 58, 0.7);
+}
+
+
+/* HEADING */
+
+.hero-left h1 {
+  margin: 0;
+
+  max-width: 800px;
+
+  color: #0b1626;
+
+  font-size: clamp(48px, 5vw, 78px);
+  line-height: 1.04;
+
+  letter-spacing: -3px;
+}
+
+.hero-left h1 span {
+  color: #d6a128;
+}
+
+
+/* DESCRIPTION */
+
+.hero-description {
+  max-width: 630px;
+
+  margin: 27px 0 35px;
+
+  color: #65707e;
+
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+}
+
+.hero-primary-btn,
+.hero-secondary-btn {
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition: 0.25s ease;
+}
+
+
+/* PRIMARY */
+
+.hero-primary-btn {
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
+
+  padding: 16px 23px;
+
+  background: #0b1626;
+
+  color: #ffffff;
+
+  box-shadow: 0 12px 28px rgba(11, 22, 38, 0.17);
+}
+
+.hero-primary-btn span {
+  font-size: 20px;
+
+  transition: transform 0.25s;
+}
+
+.hero-primary-btn:hover {
+  transform: translateY(-3px);
+}
+
+.hero-primary-btn:hover span {
+  transform: translateX(5px);
+}
+
+
+/* SECONDARY */
+
+.hero-secondary-btn {
+  padding: 16px 23px;
+
+  border: 1px solid #d8dde5;
+
+  background: white;
+
+  color: #0b1626;
+}
+
+.hero-secondary-btn:hover {
+  color: #b68110;
+
+  border-color: #efbb3a;
+}
+
+
+/* ================================
+   BENEFITS
+================================ */
+
+.hero-benefits {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 24px;
+
+  margin-top: 35px;
+}
+
+.hero-benefits div {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #596472;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero-check {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e9f8ef;
+
+  color: #16a35a;
+
+  font-size: 11px;
+  font-weight: 900;
+}
+
+
+/* ================================
+   RIGHT SIDE
+================================ */
+
+.hero-right {
+  position: relative;
+
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* BACKGROUND CIRCLE */
+
+.hero-circle {
+  position: absolute;
+
+  width: 440px;
+  height: 440px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #efbb3a,
+    #d6a128
+  );
+
+  opacity: 0.13;
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.hero-card {
+  position: relative;
+
+  width: min(100%, 440px);
+
+  padding: 38px;
+
+  border-radius: 28px;
+
+  background: #0b1626;
+
+  color: white;
+
+  box-shadow:
+    0 30px 60px rgba(11, 22, 38, 0.22);
+
+  z-index: 2;
+}
+
+
+/* CARD TAG */
+
+.hero-card-tag {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  padding: 8px 13px;
+
+  border-radius: 100px;
+
+  background: rgba(239, 187, 58, 0.13);
+
+  color: #efbb3a;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* CARD HEADING */
+
+.hero-card h2 {
+  margin: 0;
+
+  font-size: 31px;
+  line-height: 1.2;
+}
+
+
+/* CARD DESCRIPTION */
+
+.hero-card > p {
+  margin: 18px 0 25px;
+
+  color: #aeb7c4;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* ================================
+   STEPS
+================================ */
+
+.hero-steps {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+.hero-step {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.hero-step span {
+  color: #efbb3a;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.hero-step p {
+  margin: 0;
+
+  color: #dce2ea;
+
+  font-size: 13px;
+}
+
+
+/* ================================
+   CARD BUTTON
+================================ */
+
+.hero-card-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  background: #efbb3a;
+
+  color: #0b1626;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  transition: 0.25s;
+}
+
+.hero-card-button span {
+  font-size: 18px;
+
+  transition: transform 0.25s;
+}
+
+.hero-card-button:hover {
+  background: #f5c950;
+
+  transform: translateY(-2px);
+}
+
+.hero-card-button:hover span {
+  transform: translateX(5px);
+}
+
+
+
+.hero-floating span {
+  color: #d6a128;
+}
+
+.hero-floating-one {
+  top: 65px;
+  left: -10px;
+}
+
+.hero-floating-two {
+  right: -10px;
+  bottom: 60px;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding-top: 140px;
+  }
+
+  .hero-left {
+    max-width: 800px;
+  }
+
+  .hero-right {
+    min-height: auto;
+
+    padding: 50px 0;
+  }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding:
+      120px 20px
+      60px;
+  }
+
+  .hero-left h1 {
+    font-size: 45px;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .hero-primary-btn,
+  .hero-secondary-btn {
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  .hero-benefits {
+    flex-direction: column;
+
+    gap: 13px;
+  }
+
+  .hero-card {
+    padding: 28px 22px;
+  }
+
+  .hero-card h2 {
+    font-size: 27px;
+  }
+
+  .hero-floating {
+    display: none;
+  }
+
+}

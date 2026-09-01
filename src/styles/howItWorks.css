@@ -1,0 +1,317 @@
+/* ====================================
+   HOW IT WORKS
+==================================== */
+
+.how-section {
+  padding: 110px 7%;
+
+  background: #0b1626;
+
+  color: white;
+}
+
+.how-container {
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+
+/* ====================================
+   HEADER
+==================================== */
+
+.how-header {
+  max-width: 760px;
+
+  margin-bottom: 70px;
+}
+
+.how-label {
+  display: inline-block;
+
+  margin-bottom: 16px;
+
+  color: #efbb3a;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.how-header h2 {
+  margin: 0;
+
+  font-size: clamp(42px, 4vw, 64px);
+  line-height: 1.08;
+
+  letter-spacing: -2px;
+}
+
+.how-header h2 span {
+  color: #efbb3a;
+}
+
+.how-header p {
+  max-width: 650px;
+
+  margin: 24px 0 0;
+
+  color: #aeb7c4;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* ====================================
+   GRID
+==================================== */
+
+.how-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
+}
+
+
+/* ====================================
+   STEP
+==================================== */
+
+.how-step {
+  position: relative;
+
+  padding: 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.how-step:hover {
+  transform: translateY(-6px);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border-color: rgba(239, 187, 58, 0.35);
+}
+
+
+/* ====================================
+   STEP TOP
+==================================== */
+
+.how-step-top {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 35px;
+}
+
+.how-number {
+  color: #efbb3a;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.how-line {
+  flex: 1;
+
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    rgba(239, 187, 58, 0.55),
+    rgba(255, 255, 255, 0.05)
+  );
+}
+
+
+/* ====================================
+   ICON
+==================================== */
+
+.how-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 28px;
+
+  border-radius: 14px;
+
+  background: rgba(239, 187, 58, 0.12);
+
+  color: #efbb3a;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+
+/* ====================================
+   TEXT
+==================================== */
+
+.how-step h3 {
+  margin: 0 0 15px;
+
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.how-step p {
+  margin: 0;
+
+  color: #9fa9b7;
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+
+/* ====================================
+   CTA
+==================================== */
+
+.how-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 55px;
+
+  padding: 34px 38px;
+
+  border-radius: 22px;
+
+  background: #f4f6f9;
+
+  color: #0b1626;
+}
+
+.how-cta-small {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #b78513;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.how-cta h3 {
+  margin: 0;
+
+  font-size: 27px;
+}
+
+.how-cta > a {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 15px 21px;
+
+  border-radius: 12px;
+
+  background: #efbb3a;
+
+  color: #0b1626;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  transition: 0.25s ease;
+}
+
+.how-cta > a span {
+  font-size: 18px;
+
+  transition: transform 0.25s ease;
+}
+
+.how-cta > a:hover {
+  transform: translateY(-2px);
+
+  background: #f5c84e;
+}
+
+.how-cta > a:hover span {
+  transform: translateX(5px);
+}
+
+
+/* ====================================
+   TABLET
+==================================== */
+
+@media (max-width: 1000px) {
+  .how-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ====================================
+   MOBILE
+==================================== */
+
+@media (max-width: 650px) {
+  .how-section {
+    padding: 80px 20px;
+  }
+
+  .how-header {
+    margin-bottom: 45px;
+  }
+
+  .how-header h2 {
+    font-size: 42px;
+  }
+
+  .how-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .how-cta {
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 28px 22px;
+  }
+
+  .how-cta > a {
+    width: 100%;
+
+    justify-content: center;
+  }
+}

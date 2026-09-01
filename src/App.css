@@ -1,0 +1,23 @@
+main {
+  padding-top: 130px;
+}
+
+#home {
+  min-height: 100vh;
+
+  padding: 80px;
+
+  background: #f7f8fa;
+}
+
+#home h1 {
+  font-size: 60px;
+
+  color: #0b1626;
+}
+
+#home p {
+  font-size: 20px;
+
+  color: #616b78;
+}
