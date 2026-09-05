@@ -1,89 +1,68 @@
 import "../styles/about.css";
 
+const principles = [
+  {
+    number: "01",
+    title: "Product-Specific",
+    text: "We start with your product category and route instead of giving every client the same checklist.",
+  },
+  {
+    number: "02",
+    title: "Documentation-First",
+    text: "We help organize the supporting documents early so gaps are easier to identify before critical stages.",
+  },
+  {
+    number: "03",
+    title: "Stage-Aware Support",
+    text: "Fresh registration, inspection, laboratory review, renewal and lot release can require different kinds of support.",
+  },
+  {
+    number: "04",
+    title: "Clear Communication",
+    text: "We explain what has been done, what is outstanding and what the next regulatory step is expected to be.",
+  },
+];
+
 function About() {
   return (
     <section className="about-section" id="about">
       <div className="about-container">
-
         <div className="about-left">
-          <span className="about-label">
-            ABOUT AKAPSYS
-          </span>
+          <span className="section-eyebrow">ABOUT AKAPSYS</span>
 
           <h2>
-            Practical Support For
-            <span> Product Registration In Nigeria.</span>
+            Regulatory support built around <span>clarity and preparation.</span>
           </h2>
 
           <p className="about-intro">
-            Akapsys Consultancy helps businesses understand and navigate
-            product registration requirements with a clear, organized,
-            and client-focused approach.
+            Akapsys Consultancy supports businesses preparing to register regulated products
+            in Nigeria. We help clients understand the route, organize requirements and move
+            through the process with a clearer view of what comes next.
           </p>
 
           <p className="about-text">
-            We work with businesses that need support with documentation,
-            regulatory guidance, registration processes, renewals, and
-            related product compliance requirements.
+            Our role is consultancy and process support. Regulatory approvals, certificates,
+            permits and final decisions are issued by NAFDAC or the relevant authority.
           </p>
 
           <a href="#contact" className="about-button">
             Talk To A Consultant
-            <span>→</span>
+            <span aria-hidden="true">→</span>
           </a>
         </div>
 
         <div className="about-right">
-
-          <div className="about-card about-card-main">
-            <span className="about-card-number">01</span>
-
-            <h3>Clear Guidance</h3>
-
-            <p>
-              We explain the registration process in a simple,
-              understandable way so you know what to expect.
-            </p>
-          </div>
-
-          <div className="about-card">
-            <span className="about-card-number">02</span>
-
-            <h3>Client-Focused Support</h3>
-
-            <p>
-              Every product and business is different, so we provide
-              support based on your specific registration needs.
-            </p>
-          </div>
-
-          <div className="about-card">
-            <span className="about-card-number">03</span>
-
-            <h3>Organized Process</h3>
-
-            <p>
-              We help you prepare the information and documentation
-              required to move your registration process forward.
-            </p>
-          </div>
-
-          <div className="about-card">
-            <span className="about-card-number">04</span>
-
-            <h3>Ongoing Assistance</h3>
-
-            <p>
-              From your first inquiry through the registration journey,
-              we remain available to help with the next steps.
-            </p>
-          </div>
-
+          {principles.map((item, index) => (
+            <article className={`about-card ${index === 0 ? "about-card-main" : ""}`} key={item.number}>
+              <span className="about-card-number">{item.number}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
-
       </div>
     </section>
   );
 }
 
-export default About;   
+export default About;

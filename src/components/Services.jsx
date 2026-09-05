@@ -1,102 +1,96 @@
 import "../styles/services.css";
 
-function Services() {
-  const services = [
-    {
-      number: "01",
-      title: "Product Registration",
-      text: "Support with the process of registering eligible products with the appropriate Nigerian regulatory authorities.",
-    },
-    {
-      number: "02",
-      title: "Documentation Support",
-      text: "Guidance on preparing and organizing the documents required for your product registration process.",
-    },
-    {
-      number: "03",
-      title: "Regulatory Guidance",
-      text: "Clear guidance on regulatory requirements, product categories, and the steps involved in registration.",
-    },
-    {
-      number: "04",
-      title: "Registration Renewal",
-      text: "Support for businesses that need assistance renewing existing product registrations.",
-    },
-    {
-      number: "05",
-      title: "Application Follow-Up",
-      text: "Assistance with tracking applications, responding to requests, and keeping the process moving.",
-    },
-    {
-      number: "06",
-      title: "Business Consultation",
-      text: "One-on-one consultation to understand your product and determine the best registration path.",
-    },
-  ];
+const services = [
+  {
+    number: "01",
+    title: "Product & Route Assessment",
+    text: "Identify the applicable product category, registration type and likely regulatory stages before submission.",
+  },
+  {
+    number: "02",
+    title: "Documentation Readiness",
+    text: "Organize application letters, business records, authorization documents, certificates, artwork and supporting files.",
+  },
+  {
+    number: "03",
+    title: "NAPAMS Application Support",
+    text: "Practical support preparing information for the NAFDAC product-registration portal and keeping application records organized.",
+  },
+  {
+    number: "04",
+    title: "Label & Artwork Readiness",
+    text: "Review the information available on product labels and artwork before regulatory vetting or laboratory stages.",
+  },
+  {
+    number: "05",
+    title: "Dossier & Technical Support",
+    text: "Help structure dossier and technical-document requirements for products such as drugs, devices, IVDs and biologicals where applicable.",
+  },
+  {
+    number: "06",
+    title: "Facility Inspection Readiness",
+    text: "Prepare local manufacturing facilities for inspections by reviewing SOPs, personnel, hygiene, equipment and supporting documentation.",
+  },
+  {
+    number: "07",
+    title: "Permit & Laboratory Coordination",
+    text: "Support the registration-sample, import-permit and laboratory-document stages that apply to many imported regulated products.",
+  },
+  {
+    number: "08",
+    title: "Compliance, Renewal & Lot Release",
+    text: "Help organize responses to regulatory queries, renewal requirements and lot-release documentation for applicable biological products.",
+  },
+];
 
+function Services() {
   return (
     <section className="services-section" id="services">
       <div className="services-container">
-
         <div className="services-header">
           <div>
-            <span className="services-label">
-              OUR SERVICES
-            </span>
-
+            <span className="section-eyebrow">WHAT AKAPSYS HELPS WITH</span>
             <h2>
-              Everything You Need To
-              <span> Register With Confidence.</span>
+              Practical support across the <span>registration journey.</span>
             </h2>
           </div>
 
           <p>
-            We help businesses understand and navigate the
-            product registration process in Nigeria with clear,
-            practical support from start to finish.
+            Our job is to make the process more organized: understand the route, prepare
+            what is required, coordinate the next stage and keep you clear on what still needs attention.
           </p>
         </div>
 
         <div className="services-grid">
           {services.map((service) => (
-            <div className="service-card" key={service.number}>
-
+            <article className="service-card" key={service.number}>
               <div className="service-top">
-                <span className="service-number">
-                  {service.number}
-                </span>
-
-                <span className="service-arrow">
-                  ↗
-                </span>
+                <span className="service-number">{service.number}</span>
+                <span className="service-arrow" aria-hidden="true">↗</span>
               </div>
 
               <h3>{service.title}</h3>
-
               <p>{service.text}</p>
 
               <a href="#contact">
-                Learn More
-                <span>→</span>
+                Ask about this service
+                <span aria-hidden="true">→</span>
               </a>
-
-            </div>
+            </article>
           ))}
         </div>
 
         <div className="services-bottom">
           <div>
-            <span className="services-bottom-dot"></span>
-
-            Not sure which service you need?
+            <span className="services-bottom-dot" aria-hidden="true"></span>
+            Not sure which service applies to your product?
           </div>
 
           <a href="#contact">
-            Talk To A Consultant
-            <span>→</span>
+            Send Product Details
+            <span aria-hidden="true">→</span>
           </a>
         </div>
-
       </div>
     </section>
   );

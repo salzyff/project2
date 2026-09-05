@@ -1,19 +1,114 @@
+:root {
+  --navy-950: #06101d;
+  --navy-900: #0b1626;
+  --navy-850: #102035;
+  --navy-800: #15263d;
+  --gold-500: #efbb3a;
+  --gold-600: #d9a52d;
+  --gold-700: #b9820d;
+  --ink: #0d1a2a;
+  --muted: #667383;
+  --muted-light: #aeb9c7;
+  --line: #e3e7ec;
+  --surface: #f6f7f9;
+  --surface-warm: #fbf7ec;
+  --white: #ffffff;
+  --success: #13c978;
+  --shadow-sm: 0 12px 30px rgba(11, 22, 38, 0.07);
+  --shadow-md: 0 24px 60px rgba(11, 22, 38, 0.12);
+  --radius-lg: 28px;
+  --radius-md: 20px;
+  --radius-sm: 13px;
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 110px;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
+  background: var(--white);
+  color: var(--ink);
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
 
-  font-family: Arial, Helvetica, sans-serif;
+body.menu-open {
+  overflow: hidden;
+}
 
-  background: white;
+main {
+  overflow: hidden;
 }
 
 section {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 110px;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(239, 187, 58, 0.55);
+  outline-offset: 3px;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 16px;
+  color: var(--gold-700);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+}
+
+.section-eyebrow::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  border-radius: 99px;
+  background: var(--gold-500);
+}
+
+.section-eyebrow-light {
+  color: #f4c95c;
+}
+
+::selection {
+  background: rgba(239, 187, 58, 0.32);
+  color: var(--navy-950);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

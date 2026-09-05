@@ -1,91 +1,77 @@
 import "../styles/howItWorks.css";
 
-function HowItWorks() {
-  const steps = [
-    {
-      number: "01",
-      title: "Tell Us About Your Product",
-      text: "Share your product details, business information, and what you need help registering.",
-    },
-    {
-      number: "02",
-      title: "Requirements Review",
-      text: "We review your information and explain the documents, requirements, and next steps for your case.",
-    },
-    {
-      number: "03",
-      title: "Registration Support",
-      text: "We guide you through the registration process and help you prepare what is needed.",
-    },
-    {
-      number: "04",
-      title: "Progress & Completion",
-      text: "We keep you informed as the process moves forward and support you through the remaining steps.",
-    },
-  ];
+const steps = [
+  {
+    number: "01",
+    title: "Intake & Classification",
+    text: "You tell us what the product is, where it is made and whether this is a fresh application, renewal, inspection or other regulatory need.",
+  },
+  {
+    number: "02",
+    title: "Requirement Map",
+    text: "We identify the likely documents, portal steps, inspection, technical review, permit or laboratory stages for the product route.",
+  },
+  {
+    number: "03",
+    title: "Document Preparation",
+    text: "We help you organize the available supporting documents and flag missing or inconsistent information before the next step.",
+  },
+  {
+    number: "04",
+    title: "Submission Support",
+    text: "We support the application and help keep records of submissions, receipts, permits, correspondence and other process documents.",
+  },
+  {
+    number: "05",
+    title: "Inspection / Review Support",
+    text: "Where applicable, we help prepare for facility inspection, laboratory submission, dossier review or compliance-response stages.",
+  },
+  {
+    number: "06",
+    title: "Outcome & Next Steps",
+    text: "We help you understand the result, any outstanding action, renewal need or post-registration requirement relevant to the case.",
+  },
+];
 
+function HowItWorks() {
   return (
     <section className="how-section" id="how-it-works">
       <div className="how-container">
-
         <div className="how-header">
-          <span className="how-label">HOW IT WORKS</span>
-
+          <span className="section-eyebrow section-eyebrow-light">HOW IT WORKS</span>
           <h2>
-            A Clear Process From
-            <span> Start To Finish.</span>
+            A structured process from <span>first review to next action.</span>
           </h2>
-
           <p>
-            We make the registration journey easier to understand by
-            breaking it into clear, manageable steps.
+            Not every application has the same stages. Our process is designed to stay useful
+            whether your route involves documents only, a facility inspection, laboratory analysis,
+            a dossier review or several of them.
           </p>
         </div>
 
         <div className="how-grid">
-          {steps.map((step, index) => (
-            <div className="how-step" key={step.number}>
-
-              <div className="how-step-top">
-                <span className="how-number">{step.number}</span>
-
-                {index !== steps.length - 1 && (
-                  <span className="how-line"></span>
-                )}
+          {steps.map((step) => (
+            <article className="how-step" key={step.number}>
+              <div className="how-step-number">{step.number}</div>
+              <div className="how-step-copy">
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
               </div>
-
-              <div className="how-icon">
-                {index === 0 && "✦"}
-                {index === 1 && "✓"}
-                {index === 2 && "↗"}
-                {index === 3 && "★"}
-              </div>
-
-              <h3>{step.title}</h3>
-
-              <p>{step.text}</p>
-
-            </div>
+            </article>
           ))}
         </div>
 
         <div className="how-cta">
           <div>
-            <span className="how-cta-small">
-              READY TO GET STARTED?
-            </span>
-
-            <h3>
-              Tell us about your product today.
-            </h3>
+            <span className="how-cta-small">READY TO MAP YOUR ROUTE?</span>
+            <h3>Send us the product details you already have.</h3>
           </div>
 
           <a href="#contact">
-            Start Your Registration
-            <span>→</span>
+            Start Your Inquiry
+            <span aria-hidden="true">→</span>
           </a>
         </div>
-
       </div>
     </section>
   );
